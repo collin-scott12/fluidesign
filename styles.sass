@@ -1,0 +1,118 @@
+/* Fluid Typography */
+
+@function strip-unit($value)
+  @return $value / ($value * 0 + 1)
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size)
+  $u1: unit($min-vw)
+  $u2: unit($max-vw)
+  $u3: unit($min-font-size)
+  $u4: unit($max-font-size)
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4
+    &
+      font-size: $min-font-size
+      @media screen and (min-width: $min-vw)
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
+      @media screen and (min-width: $max-vw)
+        font-size: $max-font-size
+  
+/* End Fluid Typography */
+
+
+/* Fluidesign System */
+
+$margin: 2%
+$width: 100%
+$min_width: 320px
+$max_width: 1136px
+
+body
+  font-family: Arial, Helvetica, sans-serif
+  @include fluid-type($min_width, $max_width, 16px, 24px)
+  padding: 0
+  margin: 0
+  
+.row
+  background-color: #4f8aff
+  overflow: hidden
+  max-width: 1136px
+  margin: auto
+  display: flex
+  justify-content : space-between
+  flex-wrap: wrap
+  
+@mixin column
+  float: left
+  background-color: #84c6ff
+  color: #fff
+  margin-bottom: $margin
+  position: relative
+  &:after
+    padding-top: 70%
+    display: block
+    content: ''
+  
+.item-body
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  text-align: center
+  
+  
+/* Columns (-col * margin-space + margin-space + 100) / col */
+
+$max_bwidth: 1136px
+$med_bwidth: 768px
+$min_bwidth: 480px
+
+.column-twelve
+  $col: 12
+  @include column
+  width: (-$col*$margin+$margin+100)/$col
+  @media (max-width: $max_bwidth)
+    width: (-($col/2)*$margin+$margin+100)/($col/2)
+  @media (max-width: $med_bwidth)
+    width: (-($col/4)*$margin+$margin+100)/($col/4)
+  @media (max-width: $min_bwidth)
+    width: 100%
+  
+.column-six
+  $col: 6
+  @include column
+  width: (-$col*$margin+$margin+100)/$col
+  @media (max-width: $med_bwidth)
+    width: (-($col/2)*$margin+$margin+100)/($col/2)
+  @media (max-width: $min_bwidth)
+    width: 100%
+  
+.column-four
+  $col: 4
+  @include column
+  width: (-$col*$margin+$margin+100)/$col
+  @media (max-width: $med_bwidth)
+    width: (-($col/2)*$margin+$margin+100)/($col/2)
+  @media (max-width: $min_bwidth)
+    width: 100%
+  
+.column-three
+  $col: 3
+  @include column
+  width: (-$col*$margin+$margin+100)/$col
+  @media (max-width: $med_bwidth)
+    width: 100%
+
+.column-two
+  $col: 2
+  @include column
+  width: (-$col*$margin+$margin+100)/$col
+  @media (max-width: $med_bwidth)
+    width: 100%
+
+.column-one
+  @include column
+  width: 100%
+  
+/* End Fluidesign System */

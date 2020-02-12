@@ -1,0 +1,4 @@
+# Ignore extensions
+*.html
+*.css
+*.css.map
