@@ -1,0 +1,61 @@
+@import "_variables.sass"
+
+// Columns (-col * margin-space + margin-space + 100) / col
+
+@mixin column
+    float: left
+    background-color: #84c6ff
+    color: #fff
+    margin-bottom: $margin
+    position: relative
+    &:after
+        padding-top: 70%
+        display: block
+        content: ''
+
+.column-twelve
+    $col: 12
+    @include column
+    width: (-$col*$margin+$margin+100)/$col
+    @media (max-width: $max_bwidth)
+        width: (-($col/2)*$margin+$margin+100)/($col/2)
+    @media (max-width: $med_bwidth)
+        width: (-($col/4)*$margin+$margin+100)/($col/4)
+    @media (max-width: $min_bwidth)
+        width: 100%
+
+.column-six
+    $col: 6
+    @include column
+    width: (-$col*$margin+$margin+100)/$col
+    @media (max-width: $med_bwidth)
+        width: (-($col/2)*$margin+$margin+100)/($col/2)
+    @media (max-width: $min_bwidth)
+        width: 100%
+
+.column-four
+    $col: 4
+    @include column
+    width: (-$col*$margin+$margin+100)/$col
+    @media (max-width: $med_bwidth)
+        width: (-($col/2)*$margin+$margin+100)/($col/2)
+    @media (max-width: $min_bwidth)
+        width: 100%
+
+.column-three
+    $col: 3
+    @include column
+    width: (-$col*$margin+$margin+100)/$col
+    @media (max-width: $med_bwidth)
+        width: 100%
+
+.column-two
+    $col: 2
+    @include column
+    width: (-$col*$margin+$margin+100)/$col
+    @media (max-width: $med_bwidth)
+        width: 100%
+
+.column-one
+    @include column
+    width: 100%
