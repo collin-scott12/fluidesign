@@ -2,3 +2,6 @@
 *.html
 *.css
 *.css.map
+
+#Ignore files
+test-file.sass
