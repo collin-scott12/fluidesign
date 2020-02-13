@@ -2,21 +2,22 @@
 
 // Columns (-col * margin-space + margin-space + 100) / col
 
-@mixin column
+@mixin column($height)
     float: left
-    background-color: #84c6ff
+    background-color: #ddd
     color: #fff
     margin-bottom: $margin
     position: relative
+    width: (-$col*$margin+$margin+100)/$col
     &:after
-        padding-top: 70%
+        padding-top: $height
         display: block
         content: ''
 
+// For Each 12 Column Row
 .column-twelve
     $col: 12
     @include column
-    width: (-$col*$margin+$margin+100)/$col
     @media (max-width: $max_bwidth)
         width: (-($col/2)*$margin+$margin+100)/($col/2)
     @media (max-width: $med_bwidth)
@@ -24,38 +25,39 @@
     @media (max-width: $min_bwidth)
         width: 100%
 
+// For Each 6 Column Row
 .column-six
     $col: 6
     @include column
-    width: (-$col*$margin+$margin+100)/$col
     @media (max-width: $med_bwidth)
         width: (-($col/2)*$margin+$margin+100)/($col/2)
     @media (max-width: $min_bwidth)
         width: 100%
 
+// For Each 4 Column Row
 .column-four
     $col: 4
     @include column
-    width: (-$col*$margin+$margin+100)/$col
     @media (max-width: $med_bwidth)
         width: (-($col/2)*$margin+$margin+100)/($col/2)
     @media (max-width: $min_bwidth)
         width: 100%
 
+// For Each 3 Column Row
 .column-three
     $col: 3
     @include column
-    width: (-$col*$margin+$margin+100)/$col
     @media (max-width: $med_bwidth)
         width: 100%
 
+// For Each 2 Column Row
 .column-two
     $col: 2
     @include column
-    width: (-$col*$margin+$margin+100)/$col
     @media (max-width: $med_bwidth)
         width: 100%
 
+// For Each 1 Column Row
 .column-one
     @include column
     width: 100%
