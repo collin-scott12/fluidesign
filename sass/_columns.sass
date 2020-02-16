@@ -2,7 +2,7 @@
 
 // Columns (-col * margin-space + margin-space + 100) / col
 
-@mixin column($height)
+@mixin column($height, $col)
     float: left
     background-color: #ddd
     color: #fff
@@ -15,49 +15,24 @@
         content: ''
 
 // For Each 12 Column Row
-.column-twelve
-    $col: 12
-    @include column
-    @media (max-width: $max_bwidth)
-        width: (-($col/2)*$margin+$margin+100)/($col/2)
-    @media (max-width: $med_bwidth)
-        width: (-($col/4)*$margin+$margin+100)/($col/4)
-    @media (max-width: $min_bwidth)
-        width: 100%
+$columns: ("twelve": 12, "six": 6, "four": 4, "three": 3, "two": 2, "one": 1)
 
-// For Each 6 Column Row
-.column-six
-    $col: 6
-    @include column
-    @media (max-width: $med_bwidth)
-        width: (-($col/2)*$margin+$margin+100)/($col/2)
-    @media (max-width: $min_bwidth)
-        width: 100%
-
-// For Each 4 Column Row
-.column-four
-    $col: 4
-    @include column
-    @media (max-width: $med_bwidth)
-        width: (-($col/2)*$margin+$margin+100)/($col/2)
-    @media (max-width: $min_bwidth)
-        width: 100%
-
-// For Each 3 Column Row
-.column-three
-    $col: 3
-    @include column
-    @media (max-width: $med_bwidth)
-        width: 100%
-
-// For Each 2 Column Row
-.column-two
-    $col: 2
-    @include column
-    @media (max-width: $med_bwidth)
-        width: 100%
-
-// For Each 1 Column Row
-.column-one
-    @include column
-        width: 100%
+@each $name, $col in $columns
+    .column-#{$name}
+        @include column(70%, $col)
+        @media (max-width: $max_bwidth)
+            @if $col == 12
+                width: (-($col/2)*$margin+$margin+100)/($col/2)
+        @media (max-width: $med_bwidth)
+            @if $col == 12
+                width: (-($col/4)*$margin+$margin+100)/($col/4)
+            @else if $col == 6
+                width: (-($col/2)*$margin+$margin+100)/($col/2)
+            @else if $col == 4
+                width: (-($col/2)*$margin+$margin+100)/($col/2)
+            @else if $col == 3
+                width: 100%
+            @else if $col == 2
+                width: 100%
+        @media (max-width: $min_bwidth)
+            width: 100%
