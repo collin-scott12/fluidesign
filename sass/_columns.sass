@@ -5,7 +5,7 @@
 @mixin column($height, $col)
     float: left
     background-color: #ddd
-    color: #fff
+    color: #0f0
     margin-bottom: $margin
     position: relative
     width: (-$col*$margin+$margin+100)/$col
@@ -26,13 +26,9 @@ $columns: ("twelve": 12, "six": 6, "four": 4, "three": 3, "two": 2, "one": 1)
         @media (max-width: $med_bwidth)
             @if $col == 12
                 width: (-($col/4)*$margin+$margin+100)/($col/4)
-            @else if $col == 6
+            @else if $col == 6 or $col == 4
                 width: (-($col/2)*$margin+$margin+100)/($col/2)
-            @else if $col == 4
-                width: (-($col/2)*$margin+$margin+100)/($col/2)
-            @else if $col == 3
-                width: 100%
-            @else if $col == 2
+            @else if $col == 3 or $col == 2
                 width: 100%
         @media (max-width: $min_bwidth)
             width: 100%

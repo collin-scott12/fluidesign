@@ -6,3 +6,7 @@
 #Ignore files
 test-file.sass
 fluidesign.code-workspace
+.DS_Store
+
+#Ignore Node Modules
+/node_modules

@@ -8,5 +8,8 @@
     "dev": "./dev.sh"
   },
   "author": "Collin Scott",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.1"
+  }
 }
