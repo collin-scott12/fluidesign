@@ -11,13 +11,11 @@ Contact me if you have questions or comments! Let's change the way we design and
 
 # Table of Contents
 
----
-
 - [Requirements](#requirements)
 - [Path](#path)
-- [Documentation](#documentation-documentation)
-  -- [Typography](#typography)
-  -- [Grid](#grid)
+- [Documentation](#documentation)
+- - [Typography](#typography)
+- - [Grid](#grid)
 - [Copyright and License](#copyright-license)
 
 First, build a row using the `.row` class as a wrapper.
@@ -25,13 +23,9 @@ Then add the number of columns based on how many columns you want in your 12 col
 
 ## Requirements
 
----
-
 Fluidesign was built using the style preprocessor [Sass](https://sass-lang.com) and requires Sass to work properly.
 
-## Path {#path}
-
----
+## Path
 
 ```
 fluidesign/
@@ -42,11 +36,9 @@ fluidesign/
     └── _variables.sass
 ```
 
-## Documentation {#documentation}
+## Documentation
 
----
-
-### Typography {#typography}
+### Typography
 
 ##### To Use:
 
@@ -54,7 +46,7 @@ Add this code snippet to your sass file when declaring a font size. Replace minF
 
 `@include fluid-type(minFontSize, maxFontSize)`
 
-### Grid {#grid}
+### Grid
 
 `column-one` : 1 column row
 _Example:_
@@ -132,6 +124,6 @@ _Example:_
 </div>
 ```
 
-## Copyright and license {#copyright-license}
+## Copyright and license
 
 Code and documentation copyright 2020 [collinscott](http://www.collinscott.com), released under the ISC License. Docs released under Creative Commons.
