@@ -1,6 +1,6 @@
 {
   "name": "fluidesign",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a fluid design framework",
   "main": "fluidesign.sass",
   "author": "Collin Scott",
