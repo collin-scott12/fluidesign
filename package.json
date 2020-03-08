@@ -3,13 +3,6 @@
   "version": "1.0.0",
   "description": "a fluid design framework",
   "main": "fluidesign.sass",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./dev.sh"
-  },
   "author": "Collin Scott",
-  "license": "ISC",
-  "dependencies": {
-    "http-server": "^0.12.1"
-  }
+  "license": "ISC"
 }
