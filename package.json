@@ -4,5 +4,17 @@
   "description": "a fluid design framework",
   "main": "fluidesign.sass",
   "author": "Collin Scott",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://github.com/collin-scott12/fluidesign",
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "fluid",
+    "flexbox",
+    "front-end",
+    "framework",
+    "web"
+  ]
 }
