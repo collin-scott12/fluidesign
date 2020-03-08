@@ -15,7 +15,7 @@ Contact me if you have questions or comments! Let's change the way we design and
 
 - [Requirements](#requirements)
 - [Path](#path)
-- [Documentation](#documentation)
+- [Documentation](#documentation-documentation)
   -- [Typography](#typography)
   -- [Grid](#grid)
 - [Copyright and License](#copyright-license)
@@ -23,7 +23,7 @@ Contact me if you have questions or comments! Let's change the way we design and
 First, build a row using the `.row` class as a wrapper.
 Then add the number of columns based on how many columns you want in your 12 column grid.
 
-## Requirements {#requirements}
+## Requirements
 
 ---
 
