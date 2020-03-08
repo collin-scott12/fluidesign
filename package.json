@@ -16,5 +16,6 @@
     "front-end",
     "framework",
     "web"
-  ]
+  ],
+  "dependencies": {}
 }
