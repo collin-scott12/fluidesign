@@ -14,8 +14,8 @@ Contact me if you have questions or comments! Let's change the way we design and
 - [Requirements](#requirements)
 - [Path](#path)
 - [Documentation](#documentation)
-- - [Typography](#typography)
-- - [Grid](#grid)
+  - [Typography](#typography)
+  - [Grid](#grid)
 - [Copyright and License](#copyright-license)
 
 First, build a row using the `.row` class as a wrapper.
