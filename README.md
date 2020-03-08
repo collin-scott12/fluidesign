@@ -126,4 +126,4 @@ _Example:_
 
 ## Copyright and license
 
-Code and documentation copyright 2020 [collinscott](http://www.collinscott.com), released under the ISC License. Docs released under Creative Commons.
+Code and documentation copyright 2020 [collinscott](http://www.collinscott.com), released under the MIT License. Docs released under Creative Commons.
