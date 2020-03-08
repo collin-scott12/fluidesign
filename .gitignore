@@ -7,6 +7,7 @@
 test-file.sass
 fluidesign.code-workspace
 .DS_Store
+dev.sh
 
 #Ignore Node Modules
 /node_modules
